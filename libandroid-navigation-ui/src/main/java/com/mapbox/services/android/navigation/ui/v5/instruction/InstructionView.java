@@ -206,7 +206,7 @@ public class InstructionView extends RelativeLayout implements FeedbackBottomShe
   }
 
   private void setModels() {
-    alertView.setModel(navigationViewModel);
+    alertView.subscribe(navigationViewModel);
   }
 
   /**
@@ -327,10 +327,22 @@ public class InstructionView extends RelativeLayout implements FeedbackBottomShe
     }
   }
 
+  /**
+   * Gets the sound button which is used for muting/unmuting, for uses such as adding listeners and
+   * hiding the widget.
+   *
+   * @return Sound button with {@link NavigationButton} API
+   */
   public NavigationButton retrieveSoundButton() {
     return soundButton;
   }
 
+  /**
+   * Gets the feedback button which is used for sending feedback, for uses such as adding listeners
+   * and hiding the widget.
+   *
+   * @return Feedback button with {@link NavigationButton} API
+   */
   public NavigationButton retrieveFeedbackButton() {
     return feedbackButton;
   }

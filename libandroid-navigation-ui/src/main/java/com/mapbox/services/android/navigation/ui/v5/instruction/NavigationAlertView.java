@@ -38,7 +38,7 @@ public class NavigationAlertView extends AlertView implements FeedbackBottomShee
    *
    * @param navigationViewModel to set
    */
-  public void setModel(NavigationViewModel navigationViewModel) {
+  public void subscribe(NavigationViewModel navigationViewModel) {
     this.navigationViewModel = navigationViewModel;
   }
 
