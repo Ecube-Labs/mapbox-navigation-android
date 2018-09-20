@@ -611,4 +611,18 @@ public class NavigationView extends CoordinatorLayout implements LifecycleObserv
     ImageCoordinator.getInstance().shutdown();
     navigationMap = null;
   }
+
+  @Override
+  public void updateSummaryBottomSheetVisibility(boolean isVisible) {
+    if (summaryBottomSheet != null) {
+      summaryBottomSheet.setVisibility(isVisible ? View.VISIBLE : View.GONE);
+    }
+  }
+
+  @Override
+  public void updateInstructionViewVisibility(boolean isVisible) {
+      if (instructionView != null) {
+          instructionView.setVisibility(isVisible ? View.VISIBLE : View.GONE);
+      }
+  }
 }

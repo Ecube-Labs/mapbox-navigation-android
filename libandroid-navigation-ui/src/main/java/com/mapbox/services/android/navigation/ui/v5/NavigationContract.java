@@ -40,5 +40,9 @@ public interface NavigationContract {
     boolean isRecenterButtonVisible();
 
     void updateCameraRouteOverview();
+
+    void updateSummaryBottomSheetVisibility(boolean isVisible);
+
+    void updateInstructionViewVisibility(boolean isVisible);
   }
 }
